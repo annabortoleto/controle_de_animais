@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ebd987, #a73e4f);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 132px auto;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-style: italic;
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 40px;
+        }
+
+        input[type="text"],
+        input[type="radio"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #0c0101;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro da Cidade</h1>
+    <form action="dados.php" method="post">
+        <label for="nome_cidade">Nome da Cidade:</label>
+        <input type="text" name="cidade" id="cidade" required>
+        <br>
+        <label for="nome_cidade">Estado:</label>
+        <input type="text" name="estado" id="estado" required>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

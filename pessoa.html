@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ffcccc, #55d8d1);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            font-style: italic;
+            text-align: center;
+            color: #0c0000;
+        }
+        
+        form {
+            margin: 130px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: #53bcf8; /* Cor de fundo do botão Enviar */
+            color: #fff; /* Cor do texto do botão Enviar */
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro da Pessoa</h1>
+    <form action="dados.php" method="post">
+        <label for="nome_pessoa">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+        <br>
+        <label for="email_pessoa">Email:</label>
+        <input type="text" name="email" id="email" required>
+        <br>
+        <label for="endereco_pessoa">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" required>
+        <br>
+        <label for="bairro_pessoa">Bairro:</label>
+        <input type="text" name="bairro" id="bairro" required>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

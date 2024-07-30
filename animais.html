@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #87CEEB, #9146b4);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-style: italic;
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="radio"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4682B4;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form action="dados.php" method="post">
+    <h1>Cadastro do Animal</h1>
+    <label for="nome_animal">Nome do Animal:</label>
+    <input type="text" name="animal" id="animal" required>
+    <br>
+    <label for="nome_animal">Data de nascimento:</label>
+    <input type="text" name="nascimentoAnimal" id="nascimentoAnimal" required>
+    <br>
+    <label for="nome_animal">Espécie:</label>
+    <input type="text" name="especie" id="especie" required>
+    <br>
+    <label for="nome_animal">Raça:</label>
+    <input type="text" name="raca" id="raca" required>
+    <br>
+    <label for="nome_animal">Castrado:</label>
+    <input type="radio" id="botao" name="botao" value="sim">Sim
+    <input type="radio" id="botao" name="botao" value="nao">Não<br><br>
+    <input type="submit" value="Enviar">
+</form>
+</body>
+</html>
