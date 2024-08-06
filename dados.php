@@ -3,7 +3,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $senha = "";
-$nomebd = "controle_de_animais";
+$nomebd = "controle";
 $porta = 3306;
 
 $conn = new mysqli($servername, $username, $senha, $nomebd, $porta);
