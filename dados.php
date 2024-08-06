@@ -1,8 +1,8 @@
 <?php
 //conexao
-$servername = "127.0.0.1:3306";
-$username = "ifsp";
-$senha = "root";
+$servername = "127.0.0.1";
+$username = "root";
+$senha = "";
 $nomebd = "controle_de_animais";
 $porta = 3306;
 

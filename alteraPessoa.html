@@ -51,23 +51,15 @@
     </style>
 </head>
 <body>
-    <h1>Cadastro da Pessoa</h1>
-    <form action="listarPessoa.php" method="post">
-        <label for="nome_pessoa">Nome:</label>
-        <input type="text" name="nome" id="nome" required>
+    <h1>Alterar Dono</h1>
+    <form action="alteraPessoa.php" method="post">
+        <input type="hidden" name="cidade_id" value="{ID da Cidade}">
+        <label for="nova_cidade">Nome do novo dono:</label>
+        <input type="text" name="novo_dono" id="novo_dono" required>
         <br>
-        <label for="email_pessoa">Email:</label>
-        <input type="text" name="email" id="email" required>
-        <br>
-        <label for="endereco_pessoa">Endereço:</label>
-        <input type="text" name="endereco" id="endereco" required>
-        <br>
-        <label for="bairro_pessoa">Bairro:</label>
-        <input type="text" name="bairro" id="bairro" required>
-        <br>
-        <label for="bairro_pessoa">CEP:</label>
-        <input type="text" name="cep" id="cep" required>
-        <input type="submit" value="Enviar">
+        <label for="novo_estado">Email:</label>
+        <input type="text" name="novo_email" id="novo_email" required>
+        <input type="submit" name="altera_pessoa" value="Alterar">
     </form>
 </body>
 </html>

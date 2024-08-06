@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #87CEEB, #9146b4);
+            background: linear-gradient(to bottom, #9187eb, #663d68);
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
@@ -16,9 +16,9 @@
 
         form {
             background-color: #fff;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
+            max-width: 600px;
+            margin: 132px auto;
+            padding: 30px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -31,7 +31,7 @@
 
         label {
             display: block;
-            margin-top: 10px;
+            margin-top: 40px;
         }
 
         input[type="text"],
@@ -47,31 +47,43 @@
         }
 
         input[type="submit"] {
-            background-color: #4682B4;
+            background-color: #0c0101;
             color: #fff;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-<form action="listarAnimais.php" method="post">
-    <h1>Cadastro do Animal</h1>
-    <label for="nome_animal">Nome do Animal:</label>
-    <input type="text" name="animal" id="animal" required>
-    <br>
-    <label for="nome_animal">Data de nascimento:</label>
-    <input type="text" name="nascimentoAnimal" id="nascimentoAnimal" required>
-    <br>
-    <label for="nome_animal">Espécie:</label>
-    <input type="text" name="especie" id="especie" required>
-    <br>
-    <label for="nome_animal">Raça:</label>
-    <input type="text" name="raca" id="raca" required>
-    <br>
-    <label for="nome_animal">Castrado:</label>
-    <input type="radio" id="botao" name="botao" value="sim">Sim
-    <input type="radio" id="botao" name="botao" value="nao">Não<br><br>
-    <input type="submit" value="Enviar">
-</form>
+   <?php
+   include('includes/dados.php');
+   $sql = "SELECT * FROM cidade";
+ 
+   $result = mysqli_query($con, $sql);
+
+
+   ?>
+
+   <h1>LIsta de cidades</h1>
+   <table align ="center" border="1" width = "500">
+    <tr>
+        <th>Od</th>
+        <th>Nome</th>
+        <th>Estado</th>
+        <th>Alterar</th>
+        <th>Deletar</th>
+    </tr>
+    <?php 
+    while ($row = mysqli_fetch_array ($result)){
+        echo "<tr>";
+        echo "<td>". $row ['id']."</td>";
+        echo "<td>". $row['nome']."</td>";
+        echo "<td>". $row['estado']."</td>";
+
+        echo "<td><a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a></td>";
+        echo "<td><a href='DeletaCidade.php?id=".$row['id']."'>Deletar</a></td>";
+        echo "</tr>";
+    }
+    ?>
+</table>
 </body>
 </html>
